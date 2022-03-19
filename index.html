@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="./js/main.js"></script>
+    <title>MEMORY GAME</title>
+  </head>
+  <body>
+    <main>
+      <h1>Memory Game</h1>
+      <div class="container">
+        <section>
+          <div id="msg-intro">
+            <h2 class="title">To Help Fight Memory Loss</h2>
+            <div class="sub-title"></div>
+            <div id="user"></div>
+          </div>
+          <div id="grid"></div>
+          <div id="setting">
+            <img
+              class="gear-icon"
+              src="./assets/icons/icon-gear.svg"
+              alt="icon gear"
+            />
+          </div>
+          <div id="play">
+            <img
+              class="play-icon"
+              src="./assets/icons/play.svg"
+              alt="icon play"
+            />
+          </div>
+          <div id="timer">
+            <img
+              class="timer-icon"
+              src="./assets/icons/timer.svg"
+              alt="icon timer"
+            />
+          </div>
+          <div id="score">
+            <img
+              class="score-icon"
+              src="./assets/icons/score.png"
+              alt="score icon"
+            />
+          </div>
+          <div id="timer-progress-bar"></div>
+        </section>
+        <div id="msg-end-game">
+          <h2></h2>
+        </div>
+      </div>
+    </main>
+    <div id="modal-opt">
+      <div class="modal-opt__content">
+        <div class="modal-opt__header">
+          <h2 class="txt-center txt-uppCase">Setting</h2>
+        </div>
+        <div class="modal-opt__body">
+          <div class="modal-opt__body-level">
+            <div class="modal-opt__body-level-label">Level</div>
+            <div class="modal-opt__body-level-group">
+              <div class="modal-opt__body-level-1" title="Grid od 12 cards">
+                <button class="btn"><span>1</span></button>
+              </div>
+              <div class="modal-opt__body-level-2" title="Grid of 16 cards">
+                <button class="btn"><span>2</span></button>
+              </div>
+              <div class="modal-opt__body-level-3" title="Grid of 20 cards">
+                <button class="btn"><span>3</span></button>
+              </div>
+              <div class="modal-opt__body-level-4" title="Grid of 24 cards">
+                <button class="btn"><span>4</span></button>
+              </div>
+              <div
+                class="modal-opt__body-level-5 txt-uppCase"
+                title="Random Grid"
+              >
+                <button class="btn"><span>Rnd</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-opt__body-timer">
+            <div class="modal-opt__body-timer-label txt-start">Timer</div>
+            <div class="modal-opt__body-timer-group">
+              <div class="modal-opt__body-timer-1">
+                <button class="btn"><span>1 min</span></button>
+              </div>
+              <div class="modal-opt__body-timer-2">
+                <button class="btn"><span>2 min</span></button>
+              </div>
+              <div class="modal-opt__body-timer-3">
+                <button class="btn"><span>3 min</span></button>
+              </div>
+              <div class="modal-opt__body-timer-4">
+                <button class="btn"><span>4 min</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-opt__footer">
+          <button id="reload-btn" class="modal-opt__footer-reload btn-rounded">
+            <!-- <i class="fa fa-refresh" aria-hidden="true"></i> -->
+            <img
+              class="reload-icon"
+              src="./assets/icons/reload.svg"
+              alt="icon reload"
+            />
+          </button>
+          <button id="start-btn" class="modal-opt__footer-start btn-rounded">
+            <!-- <i class="fas fa-play"></i> -->
+
+            <img
+              class="play-icon"
+              src="./assets/icons/play.svg"
+              alt="icon play"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
