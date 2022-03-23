@@ -233,7 +233,7 @@ h1::before {
   transition: transform 0.3s ease-in-out;
 }
 #play:hover .play-icon {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 #timer,
 #score {
@@ -326,11 +326,11 @@ h1::before {
 
 .card.active .wrapper {
   perspective: 1000px;
-  animation: animCard 0.5s ease forwards;
+  animation: animCard 0.5s ease-out forwards;
 }
 .card.reverse .wrapper {
   perspective: 1000px;
-  animation: animCardReverse 1s ease forwards reverse;
+  animation: animCardReverse 0.5s ease-in forwards reverse;
 }
 
 @keyframes animCard {

@@ -11,7 +11,7 @@ export default function generateGridCards(
   while (grid.firstChild) {
     grid.removeChild(grid.lastChild);
   }
-  let arrCard = formatArrGrid(collectionImg, maxCard / 2);
+  const [arrCard, cardFront] = formatArrGrid(collectionImg, maxCard / 2);
   // Set nb of col with grid + create element
   grid.style.gridTemplateColumns = `repeat(${col},1fr)`;
   for (let i = 0; i < maxCard; i++) {
@@ -32,7 +32,7 @@ export default function generateGridCards(
 
     let imgFront = document.createElement("img");
     // imgFront.setAttribute("src", `${arrCard[i].src}`);
-    imgFront.setAttribute("src", `${arrCard[0].src}`);
+    imgFront.setAttribute("src", `${cardFront.src}`);
     divFrontContent.appendChild(imgFront);
     divFront.appendChild(divFrontContent);
 

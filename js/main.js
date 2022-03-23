@@ -33,20 +33,18 @@ function flipCard() {
     setTimeout(() => {
       if (!isMatchingCards) {
         cardsSelected.forEach((card) => {
-          // card.classList.remove("reverse");
           card.classList.remove("active");
           card.classList.add("reverse");
         });
       }
-    }, 800);
+    }, 1100);
     setTimeout(() => {
       if (!isMatchingCards) {
         cardsSelected.forEach((card) => card.classList.remove("reverse"));
       }
       cardsSelected = [];
       blockGrid = false;
-    }, 1700);
-    // !isMatchingCards &&
+    }, 1500);
   }
 }
 
