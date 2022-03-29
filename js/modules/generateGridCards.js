@@ -31,8 +31,9 @@ export default function generateGridCards(
     divFrontContent.classList.add("content");
 
     let imgFront = document.createElement("img");
-    // imgFront.setAttribute("src", `${arrCard[i].src}`);
-    imgFront.setAttribute("src", `${cardFront.src}`);
+    imgFront.setAttribute("src", `${arrCard[i].src}`);
+    imgFront.setAttribute("draggable", false);
+    // imgFront.setAttribute("src", `${cardFront.src}`);
     divFrontContent.appendChild(imgFront);
     divFront.appendChild(divFrontContent);
 
@@ -45,6 +46,7 @@ export default function generateGridCards(
 
     let imgBack = document.createElement("img");
     imgBack.setAttribute("src", `${arrCard[i].src}`);
+    imgBack.setAttribute("draggable", false);
 
     divBackContent.appendChild(imgBack);
     divBack.appendChild(divBackContent);
@@ -55,6 +57,12 @@ export default function generateGridCards(
     divCard.appendChild(divWrapper);
 
     grid.appendChild(divCard);
+  }
+
+  if (window.navigator.userAgent.toLowerCase().includes("firefox")) {
+    document.querySelectorAll("img[draggable=false]").forEach((el) => {
+      el.addEventListener("mousedown", (event) => event.preventDefault());
+    });
   }
   return arrCard;
 }

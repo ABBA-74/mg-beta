@@ -10,6 +10,9 @@
     <title>MEMORY GAME</title>
   </head>
   <body>
+    <noscript class="noscript-msg"
+      >Your browser does not support JavaScript!</noscript
+    >
     <main>
       <h1>Memory Game</h1>
       <div class="container">
@@ -25,6 +28,18 @@
               class="gear-icon"
               src="./assets/icons/icon-gear.svg"
               alt="icon gear"
+            />
+          </div>
+          <div id="audio">
+            <img
+              class="audio-on-icon"
+              src="./assets/icons/audio-on.svg"
+              alt="icon audio on"
+            />
+            <img
+              class="audio-muted-icon d-none"
+              src="./assets/icons/audio-muted.svg"
+              alt="icon audio muted"
             />
           </div>
           <div id="play">
@@ -68,6 +83,20 @@
           <h2 class="txt-center txt-uppCase">Setting</h2>
         </div>
         <div class="modal-opt__body">
+          <div class="modal-opt__body-sound">
+            <div class="modal-opt__body-sound-label">Sound</div>
+            <div class="modal-opt__body-sound-group">
+              <div class="modal-opt__body-sound-on" title="Switch On the sound">
+                <button class="btn"><span>On</span></button>
+              </div>
+              <div
+                class="modal-opt__body-sound-off"
+                title="Switch Off the sound"
+              >
+                <button class="btn"><span>Off</span></button>
+              </div>
+            </div>
+          </div>
           <div class="modal-opt__body-level">
             <div class="modal-opt__body-level-label">Level</div>
             <div class="modal-opt__body-level-group">
@@ -111,7 +140,6 @@
         </div>
         <div class="modal-opt__footer">
           <button id="reload-btn" class="modal-opt__footer-reload btn-rounded">
-            <!-- <i class="fa fa-refresh" aria-hidden="true"></i> -->
             <img
               class="reload-icon"
               src="./assets/icons/reload.svg"
@@ -119,8 +147,6 @@
             />
           </button>
           <button id="start-btn" class="modal-opt__footer-start btn-rounded">
-            <!-- <i class="fas fa-play"></i> -->
-
             <img
               class="play-icon"
               src="./assets/icons/play.svg"
