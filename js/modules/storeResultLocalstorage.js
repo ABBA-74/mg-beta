@@ -3,9 +3,9 @@
 import {
   createNewRecordMsg,
   displayNewRecordMsg,
-} from "./handleNewRecordMsg.js";
-import formatDateTime from "./formatDateTime.js";
-console.log("inside local");
+} from './handleNewRecordMsg.js';
+import formatDateTime from './formatDateTime.js';
+console.log('inside local');
 
 export default function storeResultLocalstorage(
   delay,
@@ -16,7 +16,9 @@ export default function storeResultLocalstorage(
   audioNewRecord,
   audioComplete
 ) {
-  console.log("tttt");
+  audioNewRecord.crossOrigin = 'anonymous';
+  audioComplete.crossOrigin = 'anonymous';
+
   let resumGame = [];
   let scoreCurrentLevel = [];
   let isNewRecord = false;
@@ -29,7 +31,7 @@ export default function storeResultLocalstorage(
   );
   const level = optionGameChoosen[0].level;
   // Retrieve the object from storage if existing
-  let dataFromLocalStorage = localStorage.getItem("resumGame");
+  let dataFromLocalStorage = localStorage.getItem('resumGame');
 
   if (dataFromLocalStorage !== null) {
     resumGame = JSON.parse(dataFromLocalStorage);
@@ -46,7 +48,7 @@ export default function storeResultLocalstorage(
     isNewRecord = scoreCurrentLevel.every((item) => {
       return item.elapsedTime >= elapsedTime;
     });
-    console.log("IS NEW RECORD /// ", isNewRecord);
+    console.log('IS NEW RECORD /// ', isNewRecord);
     if (isNewRecord) {
       createNewRecordMsg();
       displayNewRecordMsg();
@@ -69,8 +71,8 @@ export default function storeResultLocalstorage(
     audioComplete.play();
   }
   // Put the object into storage
-  localStorage.setItem("resumGame", JSON.stringify(resumGame));
+  localStorage.setItem('resumGame', JSON.stringify(resumGame));
   // Retrieve the object from storage
-  let retrievedObject = localStorage.getItem("resumGame");
-  console.log("resumGame: ", JSON.parse(retrievedObject));
+  let retrievedObject = localStorage.getItem('resumGame');
+  console.log('resumGame: ', JSON.parse(retrievedObject));
 }
