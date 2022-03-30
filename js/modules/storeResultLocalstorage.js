@@ -65,7 +65,6 @@ export default function storeResultLocalstorage(
       },
     ];
   }
-
   // Play sound end game
   if (!isNewRecord) {
     audioComplete.play();

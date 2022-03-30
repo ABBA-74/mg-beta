@@ -158,9 +158,6 @@ const levelBtns = document.querySelectorAll(
 const timerBtns = document.querySelectorAll(
   '.modal-opt__body-timer-group .btn'
 );
-let soundSelected;
-let levelSelected;
-let timerSelected;
 const openModal = () => {
   modal.style.display = 'block';
 };
@@ -239,7 +236,7 @@ const initGame = () => {
     '.modal-opt__body-level-group .btn.active'
   );
   const levelList = [...levelBtns];
-  levelSelected = levelList.indexOf(activeLevel);
+  let levelSelected = levelList.indexOf(activeLevel);
 
   const timerList = [...timerBtns];
   const activeTimer = document.querySelector(
