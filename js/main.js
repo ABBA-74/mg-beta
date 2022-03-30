@@ -7,9 +7,14 @@ import storeResultLocalstorage from './modules/storeResultLocalstorage.js';
 import initOptions from './modules/initOptions.js';
 import { handleSound, setSoundOn, setSoundOff } from './modules/handleSound.js';
 import displayScore from './modules/displayScore.js';
-const newRecordSound = '../assets/audio/new-record.mp3';
-const failedSound = '../assets/audio/failed.mp3';
-const completeSound = '../assets/audio/complete.mp3';
+// const newRecordSound = '../assets/audio/new-record.mp3';
+// const failedSound = '../assets/audio/failed.mp3';
+// const completeSound = '../assets/audio/complete.mp3';
+const newRecordSound =
+  'https://abba-74.github.io/mg-beta/assets/audio/new-record.mp3';
+const failedSound = 'https://abba-74.github.io/mg-beta/assets/audio/failed.mp3';
+const completeSound =
+  'https://abba-74.github.io/mg-beta/assets/audio/complete.mp3';
 
 const audioNewRecord = new Audio(newRecordSound);
 const audioFailed = new Audio(failedSound);

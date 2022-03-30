@@ -48,7 +48,7 @@ export default function storeResultLocalstorage(
     isNewRecord = scoreCurrentLevel.every((item) => {
       return item.elapsedTime >= elapsedTime;
     });
-    console.log('IS NEW RECORD /// ', isNewRecord);
+
     if (isNewRecord) {
       createNewRecordMsg();
       displayNewRecordMsg();
