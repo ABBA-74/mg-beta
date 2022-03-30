@@ -70,7 +70,6 @@ function isIdenticalCards(card1, card2) {
   nbRound++;
   // if cards matched >>> set true to isVisible for selected cards
   let isSameCard = card1.dataset.idcard === card2.dataset.idcard ? true : false;
-
   if (isSameCard) {
     nbRoundSucced++;
     // Remove event listener of cards matched
@@ -109,13 +108,11 @@ const timerLabel = document.getElementById('timer');
 let delay;
 let timerValue;
 let intervalId;
-
 // progress bar
 function animProgressBar() {
   let widthBar = 0;
   intervalId = setInterval(translateTimerBar, 1000);
   timerValue = 0;
-
   function translateTimerBar() {
     if (widthBar < delay) {
       widthBar++;
@@ -141,7 +138,6 @@ function animProgressBar() {
     }
   }
 }
-
 //////////////////////////////////////////////////////////////////
 //////////// Modal Setting
 const msgIntro = document.getElementById('msg-intro');
@@ -195,7 +191,6 @@ const startGame = () => {
   scoreLabel.innerText = '';
   if (newRecord !== null) {
     newRecord.remove();
-    console.log('remove new record');
   }
   clearInterval(intervalId);
 
@@ -291,7 +286,6 @@ const displayWarningMsgLandscape = () => {
     msgWarningLandscape.style.display = 'block';
   } else {
     msgWarningLandscape.style.display = 'none';
-    // msgWarningLandscape.style.color = "red";
   }
 };
 window.addEventListener('orientationchange', displayWarningMsgLandscape);

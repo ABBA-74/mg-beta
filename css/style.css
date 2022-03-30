@@ -1,3 +1,5 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
 /* Reset css */
 *,
 *::before,
@@ -142,14 +144,6 @@ h1,
     transform: translate(-50%, -50%) scale(1);
   }
 }
-#msg-intro .sub-title {
-  font-size: 2rem;
-  text-shadow: 0 0.5rem rgba(0, 0, 0, 0.925);
-  font-weight: 800;
-  position: absolute;
-  top: 3%;
-  left: 8%;
-}
 #user {
   position: absolute;
   top: 30%;
@@ -223,10 +217,8 @@ h1,
   width: 5rem;
   height: 3rem;
   border-radius: var(--br-1);
-  text-align: center;
   line-height: 3rem;
-  font-size: 1.2rem;
-  font-weight: 600;
+  text-align: center;
 }
 #timer {
   left: 1rem;
@@ -238,6 +230,11 @@ h1,
   width: 3rem;
   top: 1rem;
   left: 1rem;
+}
+#score,
+#timer {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 #play,
 #audio {
@@ -314,8 +311,6 @@ h1,
 .card {
   overflow: hidden;
   color: rgb(14, 14, 14);
-  font-weight: 600;
-  font-size: 1.5rem;
   height: 6.25rem;
   width: 6.25rem;
   background-color: rgba(250, 235, 215, 0.616);
@@ -324,9 +319,6 @@ h1,
   cursor: pointer;
   border-radius: var(--br-1);
   transition: box-shadow 0.3s ease-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   perspective: 62.5rem;
 }
 .card .wrapper {
@@ -368,6 +360,7 @@ h1,
   -webkit-backdrop-filter: blur(9px) saturate(161%);
   background-color: rgba(67, 80, 106, 0.308);
   border: 0.06rem solid rgba(255, 255, 255, 0.438);
+  box-shadow: 0 0 1rem rgba(27, 27, 27, 0.71);
 }
 .card.active .wrapper {
   perspective: 62.5rem;
@@ -497,7 +490,6 @@ h1,
 .modal-opt__body-sound-label,
 .modal-opt__body-level-label,
 .modal-opt__body-timer-label {
-  font-weight: 300;
   line-height: 2.5rem;
 }
 .modal-opt__body .btn > span {
@@ -631,9 +623,6 @@ h1,
   #msg-intro .title {
     font-size: clamp(0.5rem, 1rem + 2.5vw, 3rem);
   }
-  #msg-intro .sub-title {
-    font-weight: 1rem;
-  }
 }
 @media screen and (max-width: 950px) {
   #grid {
@@ -662,7 +651,6 @@ h1,
   }
   #msg-end-game h2 {
     font-size: 2rem;
-    /* top: 0rem; */
     top: 3.2rem;
   }
   .card {

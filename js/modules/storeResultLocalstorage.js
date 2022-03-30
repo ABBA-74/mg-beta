@@ -5,7 +5,6 @@ import {
   displayNewRecordMsg,
 } from './handleNewRecordMsg.js';
 import formatDateTime from './formatDateTime.js';
-console.log('inside local');
 
 export default function storeResultLocalstorage(
   delay,
@@ -22,7 +21,6 @@ export default function storeResultLocalstorage(
   let resumGame = [];
   let scoreCurrentLevel = [];
   let isNewRecord = false;
-  console.log(formatDateTime());
   formatDateTime();
   const [dateToday, time] = formatDateTime();
   const elapsedTime = delay - timerValue;
@@ -73,5 +71,5 @@ export default function storeResultLocalstorage(
   localStorage.setItem('resumGame', JSON.stringify(resumGame));
   // Retrieve the object from storage
   let retrievedObject = localStorage.getItem('resumGame');
-  console.log('resumGame: ', JSON.parse(retrievedObject));
+  // console.log('resumGame: ', JSON.parse(retrievedObject));
 }
